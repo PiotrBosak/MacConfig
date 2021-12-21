@@ -1,0 +1,85 @@
+set surround
+set NERDTree
+Plug 'machakann/vim-highlightedyank'
+set exchange
+set ideajoin
+set showmode
+set sneak
+set textobj-entire
+set textobj-indent
+set smartcase
+set multiple-cursors
+set incsearch
+set ignorecase
+set clipboard=unnamed
+set number relativenumber
+set commentary
+set idearefactormode=keep
+set which-key
+set notimeout
+set SmartSearch
+
+set clipboard+=ideaput
+
+nmap <space>n :action GotoClass<CR>
+nmap <space>m :action GotoFile<CR>
+nmap <space>s :action GotoSymbol<CR>
+nmap <space>ff <Action>(SmartSearchInFile)<CR>
+nmap <space>fp <Action>(SmartSearchInProject)<CR>
+nmap <space>fd <Action>(SmartSearchDefault)<CR>
+nmap <space>bb :action RecentChangedFiles<CR>
+nmap <space><space> :action AceAction<CR>
+nmap <space>yu :action GotoImplementation<CR>
+nmap <space>yy :action GotoSuperMethod<CR>
+nmap <space>rp :action CompileDirty<CR>
+nmap <space>rc :action RunClass<CR>
+nmap <space>rs: :action Stop<CR>
+nmap <space>ri :action Run<CR>
+nmap <space>di :action Debug<CR>
+nmap <space>dc :action DebugClass<CR>
+nmap <space>dr :action Resume<CR>
+nmap <space>ds :action StepOver<CR>
+nmap <space>dp :action ToggleLineBreakpoint<CR>
+nmap <space>dtp :action ToggleTemporaryLineBreakpoint<CR>
+nmap <space>dab :action ViewBreakpoints<CR>
+nmap <space>rr :action Rerun<CR>
+nmap <space>l :action ShowErrorDescription<CR>
+
+vmap <space>ee :action Scala.TypeInfo<CR>
+
+
+nmap <space>oo :action FindUsages<CR>
+nmap <space>hh :action ReformatCode<cr>
+nmap <space>fs :action FileStructurePopup<CR>
+
+
+nmap <space>io :action OptimizeImports<CR>
+nmap <leader>u /\u/s+<cr>
+nmap <space>e :action GotoNextError<CR>
+"map ctrl l to find next error"
+"map ctrl j to show context actions
+"map key on the left(previous recent files) to 'select file in project view'
+"map ctrl+H to type info in scala section"
+nmap Y y$
+
+"new stuff, add to work ideavim"
+
+nmap <C-o> <Action>(Back)
+
+nmap<space>qq :action HideAllWindows<CR>
+
+"keep this"
+vmap <space>ft :action Vcs.ShowHistoryForBlock<CR>
+nmap <space>ft <Action>($SelectAll)<Action>(Vcs.ShowHistoryForBlock)<CR>
+
+"set select all to control alt shift a"
+"new STUFF, copy"
+nmap <space>fn :action ShowNavBar<CR>
+
+"get path t ctrl alt shift 9"
+nmap <space>xs :action GetPathAction<CR>
+nmap <space>op :action OpenProjectWindows<CR>
+nmap <space>rw :action Scala.RunWorkSheet<CR>
+nmap <space>fb :action NewScratchFile<CR>
+nmap <space>ra :action RunAnything<CR>
+"alt k for project view
